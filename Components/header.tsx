@@ -24,7 +24,7 @@ const Header = () => {
             Quibusdam eveniet magnam velit blanditiis molestias ab perspiciatis
             similique porro aperiam quo.
           </p>
-          <MyCustomBtn color="white" text="BOOK A TABLE" bg="bg-slate-900" size="14px" />
+          <MyCustomBtn color="white" text="BOOK A TABLE" bg="bg-slate-900" size="14px" link="/"/>
         </div>
       </div>
 

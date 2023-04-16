@@ -1,29 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowLongRightIcon ,Bars3Icon,XMarkIcon } from "@heroicons/react/24/solid";
 import { BsSuitDiamondFill } from 'react-icons/bs';
+import Link from "next/link";
+import ContactUsPage from './../pages/contactUsPage';
 
 
 
 
-const Navbar = () => {
+const Navbar = ({bgColor,textColor}:any ,props:any) => {
   const [isShow, setIsShow] = useState<boolean>(false)
+  const [isColorWhite, setColorWhite] = useState<string>()
+
+
+
+
+useEffect(() => {
+  if (bgColor === "white") {
+    setColorWhite("./chef-restaurant-logo-publicdomainvectors.svg")
+  }else
+    if (bgColor === "transparent") {
+      setColorWhite("./chef-whiteLogo.svg")
+    
+    } 
+   
+
+}, [])
+
 
   return (<>
-    <div className={`flex xl:justify-evenly justify-between items-center fixed z-20 w-full bg-white flex-wrap  border-b-2 ${isShow&& "bg-neutral-700 md:bg-white"}`}>
+    <div  className={`flex xl:justify-evenly justify-between  items-center fixed z-50 w-full text-${textColor} bg-${bgColor} flex-wrap  border-b-2 ${isShow && "bg-gray-900"}`}>
       <div className="flex p-2 justify-center items-center">
       <div className="flex justify-center items-center">
-      <img src={`${isShow?"./chef-whiteLogo.svg":"./chef-restaurant-logo-publicdomainvectors.svg"}`} alt="Logo" className="logo-image" />
+      <img src={` ${isShow? "./chef-whiteLogo.svg":isColorWhite}`} alt="Logo" className="logo-image" />
     </div>
-  <span className={`text-bold  xl:text-4xl text-3xl  ${isShow&& "md:text-black text-white "}`}>Sicily</span>
+  <span className={`text-bold  xl:text-4xl text-3xl  ${isShow&& " text-white "}`}>Sicily</span>
       </div>
       <div className="xl:flex hidden mt-6  font-bold items-center">
         <ul className="flex xl:gap-8 gap-6 text-sm xl:text-md">
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100 py-2 navbar-menu-item">
-            <li>DISCOVER</li>
+            <li> <Link href={"/"}>DISCOVER</Link></li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2  navbar-menu-item">
-            <li>OUR MENU</li>
+            <li> <Link href={"/ourMenu"}>OUR MENU</Link></li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
 
@@ -37,7 +56,9 @@ const Navbar = () => {
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-            <li>CONTACT</li>
+            <li>
+              <Link href={"/contactUsPage"}>CONTACT</Link>
+            </li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
         </ul>
@@ -58,7 +79,7 @@ const Navbar = () => {
 
     </div>
       {isShow &&
-        <div className="w-full  flex-row bg-neutral-700  h-screen text-white animate xl:hidden ">
+        <div className="w-full  flex-row bg-black md:pt-[15%] pt-[30%]  h-screen text-white animate xl:hidden ">
         <ul className="inline-block gap-8 delay">
             <div className=" hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100 py-2 navbar-menu-item">
               <li>DISCOVER</li>
@@ -79,7 +100,7 @@ const Navbar = () => {
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-              <li>CONTACT</li>
+              <li> <Link href={"/contactUsPage"}>CONTACT</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
           <div className="flex items-center   bg-transparent border-[#cd9473] border-b-2 border-solid ">

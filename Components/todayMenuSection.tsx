@@ -48,7 +48,7 @@ const TodayMenu = () => {
                       </div>
                   </div>
               </div>
-              <MyCustomBtn color="white" text="Check The Menu" bg="bg-slate-900" size="14px" />
+              <MyCustomBtn color="white" text="Check The Menu" bg="bg-slate-900" size="14px" link="/"/>
           </div>
     
           

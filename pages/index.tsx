@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 import Navbar from '@/Components/navbar'
 import Footer from '@/Components/footer'
@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar bgColor="white" textColor="black" />
       <Header />
       <MottoSection />
       <TodayMenu/>

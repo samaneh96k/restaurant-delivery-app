@@ -25,13 +25,7 @@ const Footer = () => {
           <div className="flex lg:w-1/2 w-full mt-4">
             <form className="flex justify-evenly items-center w-full flex-wrap">
               <input type="text" placeholder="TYPE YOUR EMAIL" className="lg:w-3/6 text-sm text-white outline-none border-b-2 border-[#ffff] bg-[#333] w-2/3 p-2" />
-              {/* <button type="submit" className=" bg-[#ffff] my-4 p-1 text-[#333] lg:w-2/6">
-                <div className="flex items-center  px-8 bg-transparent border-white-400 border-2 border-solid">
-                  <a href="#" className="cursor-pointer p-2 text-sm lg:text-md">SUBSCRIBE</a>
-                  <ArrowLongRightIcon className="xl:h-6 xl:w-6 h-3 w-3" />
-                </div>
-              </button> */}
-              <MyCustomBtn color="[#333]" text="SUBSCRIBE" bg="bg-white" size="14px"/>
+              <MyCustomBtn color="[#333]" text="SUBSCRIBE" bg="bg-white" size="14px" link="/"/>
             </form>
           </div>
               </div>
