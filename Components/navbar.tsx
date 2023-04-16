@@ -4,11 +4,12 @@ import { BsSuitDiamondFill } from 'react-icons/bs';
 
 
 
+
 const Navbar = () => {
   const [isShow, setIsShow] = useState<boolean>(false)
-//image logo style taiwind
+
   return (<>
-    <div className={`flex xl:justify-evenly justify-between items-center fix flex-wrap  border-b-2 ${isShow&& "bg-neutral-700 md:bg-white"}`}>
+    <div className={`flex xl:justify-evenly justify-between items-center fixed z-20 w-full bg-white flex-wrap  border-b-2 ${isShow&& "bg-neutral-700 md:bg-white"}`}>
       <div className="flex p-2 justify-center items-center">
       <div className="flex justify-center items-center">
       <img src={`${isShow?"./chef-whiteLogo.svg":"./chef-restaurant-logo-publicdomainvectors.svg"}`} alt="Logo" className="logo-image" />
@@ -84,7 +85,8 @@ const Navbar = () => {
           <div className="flex items-center   bg-transparent border-[#cd9473] border-b-2 border-solid ">
           <button className="cursor-pointer p-2 text-[#cd9473]">BOOK A TABLE</button>
           <ArrowLongRightIcon className="h-6 w-6 text-[#cd9473]" />
-        </div>
+          </div> 
+       
         </ul>
       
     </div>

@@ -1,21 +1,51 @@
-import React from 'react'
+import React from "react";
+import MyCustomBtn from "./common/myCustomBtn";
 
 const Header = () => {
-    //header image tailwind css
   return (
-      <div className="flex flex-wrap">
-       
-          <div className='w-1/2'>
-              <h1>THE TASTE COMSE FIRST</h1> 
-              <h2>Pull Up a Chair.Take a Taste.Join Us.Life is so endlessy.</h2>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate similique saepe ea omnis quae corporis alias necessitatibus amet! Quibusdam eveniet magnam velit blanditiis molestias ab perspiciatis similique porro aperiam quo.</p>
+    <div className="flex flex-wrap justify-center w-full xl:mb-[10%] md:mb-[15%] mb-[25%] pt-[10%] xl:h-fit">
+      <div className="xl:w-1/2 w-full  flex flex-wrap p-8 ">
+        <div className="p-8 ">
+          <div className="py-4">
+            <h1 className="text-[#cd9473]  xl:text-sm font-bold">
+              THE TASTE COMSE FIRST
+            </h1>
+            <h2 className="xl:text-5xl text-2xl font-bold ">
+              Pull Up a Chair.Take a Taste.Join Us.Life is so endlessy.
+            </h2>
+            <div className="text-left pt-8">
+              <h1>~~~~~~</h1>
+            </div>
           </div>
-          <div className='w-1/2 flex justify-start flex-wrap p-5 relative p-28'>
-              <img className='w-full object-cover'  src='./header-img-big.jpg' alt='restaurant-custumers'></img>
-              <img className='w-1/4 border-t-8 object-cover  border-r-8 border-solid border-white absolute top-80 left-0 z-10' src='./header-img-small.jpg' alt='restaurant-foods'/>
-          </div>
+
+          <p className="py-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+            similique saepe ea omnis quae corporis alias necessitatibus amet!
+            Quibusdam eveniet magnam velit blanditiis molestias ab perspiciatis
+            similique porro aperiam quo.
+          </p>
+          <MyCustomBtn color="white" text="BOOK A TABLE" bg="bg-slate-900" size="14px" />
+        </div>
+      </div>
+
+      <div className="w-[80%] xl:w-1/2 max-w-screen-sm relative ">
+        <div className="aspect-w-4 aspect-h-2 ">
+          <img
+            className="object-cover object-center h-full w-full absolute   bottom-0 xl:top-12"
+            src="./header-img-big.jpg"
+            alt="restaurant-custumers"
+          />
+        </div>
+        <div className="aspect-w-3 aspect-h-1  absolute  xl:bottom-10 md:bottom-0 bottom-[-15%] left-[-10%] xl:left-[-10%] h-1/4 w-2/4  ">
+          <img
+            className=" object-center border-8   xl:border-[16px] object-cover   border-solid border-white h-full w-full "
+            src="./header-img-small.jpg"
+            alt="restaurant-foods"
+          />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;

@@ -41,7 +41,9 @@ li {
   color: #cd9473;
   
 }
-
+.color-icon{
+  color: #cd9473 !important;
+}
 .logo-container {
   display: flex;
   justify-content: center;
@@ -51,6 +53,16 @@ li {
 .logo-image {
   width: 60px;
 }
+.bg-image{
+  background: url(../public/img/chef-cooking.jpg);
+  background-position: center;
+  background-size: 100%;
+  
 
 
 
+}
+
+.bg-iframe{
+  background-color: black;
+}
