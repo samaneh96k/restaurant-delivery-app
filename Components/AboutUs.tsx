@@ -2,7 +2,7 @@ import React from 'react'
 import MyCustomBtn from './common/myCustomBtn'
 import AboutUsChef from './AboutUsChef'
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
 < >   <div className="flex flex-wrap justify-center w-full xl:mb-[10%] md:mb-[15%] mb-[25%] pt-[10%] xl:h-fit ">
     <div className="xl:w-1/2 w-full  flex flex-wrap p-8 ">
@@ -53,4 +53,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default AboutUsPage

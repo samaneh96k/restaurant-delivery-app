@@ -66,3 +66,12 @@ li {
 .bg-iframe{
   background-color: black;
 }
+
+select{
+
+  border-width: 20px !important; 
+ border-top-width: 0 !important;
+ border-bottom-width: 0 !important;
+ border-left-width: 0 !important;
+
+}

@@ -13,7 +13,7 @@ interface MyFormValues {
   intresets: string[];
   nation: string;
 }
-const ContactUs = () => {
+const ContactUsPage = () => {
   const initialValues: MyFormValues = {
     name: "",
     email: "",
@@ -41,7 +41,7 @@ const ContactUs = () => {
         <div className="bg-black absolute top-[0] left-0 w-full h-full opacity-[0.6] z-20">
           {" "}
         </div>
-        <div className=" absolute top-[50%] left-0 w-full h-full z-20 text-center">
+        <div className=" absolute top-[50%] left-0 w-full h-fit z-20 text-center">
           <h2 className="text-3xl text-white">Contact Us</h2>
           <span className="text-xl text-white">~~~~</span>
         </div>
@@ -161,4 +161,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUsPage;

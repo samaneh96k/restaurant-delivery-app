@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ArrowLongRightIcon ,Bars3Icon,XMarkIcon } from "@heroicons/react/24/solid";
 import { BsSuitDiamondFill } from 'react-icons/bs';
 import Link from "next/link";
-import ContactUsPage from './../pages/contactUsPage';
+import ContactUsPage from '../pages/contactUs';
 
 
 
@@ -47,17 +47,17 @@ useEffect(() => {
           </div>
 
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-            <li><Link href={"/aboutUsPage"}>ABOUT US</Link></li>
+            <li><Link href={"/aboutUs"}>ABOUT US</Link></li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
 
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-            <li>GALLERY</li>
+            <li> <Link href={"/gallery"}>GALLERY</Link></li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
             <li>
-              <Link href={"/contactUsPage"}>CONTACT</Link>
+              <Link href={"/contactUs"}>CONTACT</Link>
             </li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
@@ -66,7 +66,7 @@ useEffect(() => {
 
       <div className=" bg-gradient-to-r from-[#ab795e] to-[#d3aa77] my-2 p-1 text-white xl:flex hidden">
         <div className="flex items-center px-2  xl:px-6 bg-transparent border-white-400 border-2 border-solid">
-          <a className="cursor-pointer p-2 xl:text-md text-sm">BOOK A TABLE</a>
+          <Link href={"/bookTable"} className="cursor-pointer p-2 xl:text-md text-sm">BOOK A TABLE</Link>
           <ArrowLongRightIcon className="md:h-6 md:w-6" />
         </div>
       </div>
@@ -91,7 +91,7 @@ useEffect(() => {
             </div>
   
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-              <li><Link href={"/aboutUsPage"}>ABOUT US</Link></li>
+              <li><Link href={"/aboutUs"}>ABOUT US</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
   
@@ -100,7 +100,7 @@ useEffect(() => {
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-              <li> <Link href={"/contactUsPage"}>CONTACT</Link></li>
+              <li> <Link href={"/contactUs"}>CONTACT</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
           <div className="flex items-center   bg-transparent border-[#cd9473] border-b-2 border-solid ">
