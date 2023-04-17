@@ -47,7 +47,7 @@ useEffect(() => {
           </div>
 
           <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-            <li>ABOUT US</li>
+            <li><Link href={"/aboutUsPage"}>ABOUT US</Link></li>
             <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
           </div>
 
@@ -82,7 +82,7 @@ useEffect(() => {
         <div className="w-full  flex-row bg-black md:pt-[15%] pt-[30%]  h-screen text-white animate xl:hidden ">
         <ul className="inline-block gap-8 delay">
             <div className=" hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100 py-2 navbar-menu-item">
-              <li>DISCOVER</li>
+              <li><Link href={"/"}>DISCOVER</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2  navbar-menu-item">
@@ -91,7 +91,7 @@ useEffect(() => {
             </div>
   
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-              <li>ABOUT US</li>
+              <li><Link href={"/aboutUsPage"}>ABOUT US</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
   
