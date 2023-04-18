@@ -28,7 +28,7 @@ useEffect(() => {
 
 
   return (<>
-    <div  className={`flex xl:justify-evenly justify-between  items-center fixed z-50 w-full text-${textColor} bg-${bgColor} flex-wrap  border-b-2 ${isShow && "bg-gray-900"}`}>
+    <div  className={`flex xl:justify-evenly justify-between  items-center fixed z-50 w-full text-${textColor} bg-${bgColor} flex-wrap  border-b-2 ${isShow && "bg-color-black"}`}>
       <div className="flex p-2 justify-center items-center">
       <div className="flex justify-center items-center">
       <img src={` ${isShow? "./chef-whiteLogo.svg":isColorWhite}`} alt="Logo" className="logo-image" />
@@ -79,7 +79,7 @@ useEffect(() => {
 
     </div>
       {isShow &&
-        <div className="w-full  flex-row bg-black md:pt-[15%] pt-[30%]  h-screen text-white animate xl:hidden ">
+        <div className="w-full  flex-row bg-black md:pt-[15%] pt-[30%] absolute top-[12%] left-0 z-50 h-fit text-white animate xl:hidden ">
         <ul className="inline-block gap-8 delay">
             <div className=" hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100 py-2 navbar-menu-item">
               <li><Link href={"/"}>DISCOVER</Link></li>

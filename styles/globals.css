@@ -15,7 +15,7 @@
     height: 0;
   }
   100% {
-    height:100vh;
+    height:100 fit-content;
   }
 }
 @keyframes play {
@@ -62,7 +62,7 @@ li {
 
 
 }
-
+.bg-color-black,
 .bg-iframe{
   background-color: black;
 }
