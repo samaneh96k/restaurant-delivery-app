@@ -37,13 +37,12 @@ const ContactUsPage = () => {
   });
   return (
     <div className="h-full w-full flex flex-wrap mb-[10%]">
-      <div className="relative  w-full h-full ">
-        <div className="bg-black absolute top-[0] left-0 w-full h-full opacity-[0.6] z-20">
-          {" "}
+                    <div className="relative  w-full h-full mt-[22%] sm:mt-[4%] md:mt-[8%] xl:mt-0">
+        <div className="bg-black absolute xl:top-[0]  left-0 w-full h-full opacity-[0.6] z-20">
         </div>
-        <div className=" absolute top-[50%] left-0 w-full h-fit z-20 text-center">
-          <h2 className="text-3xl text-white">Contact Us</h2>
-          <span className="text-xl text-white">~~~~</span>
+        <div className=" absolute top-[30%] sm:p-0 px-2 sm:top-[40%] xl:top-[50%] left-0 w-full h-fit  z-20 text-center">
+          <h2 className="md:text-3xl text-[12px] text-white">Contact Us</h2>
+          <span className="md:text-xl text-white">~~~~</span>
         </div>
         <div className="aspect-w-4 aspect-h-1 ">
           <img

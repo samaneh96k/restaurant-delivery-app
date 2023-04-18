@@ -16,10 +16,10 @@ const Navbar = ({bgColor,textColor}:any ,props:any) => {
 
 useEffect(() => {
   if (bgColor === "white") {
-    setColorWhite("./chef-restaurant-logo-publicdomainvectors.svg")
+    setColorWhite("../chef-restaurant-logo-publicdomainvectors.svg")
   }else
     if (bgColor === "transparent") {
-      setColorWhite("./chef-whiteLogo.svg")
+      setColorWhite("../chef-whiteLogo.svg")
     
     } 
    
@@ -31,7 +31,7 @@ useEffect(() => {
     <div  className={`flex xl:justify-evenly justify-between  items-center fixed z-50 w-full text-${textColor} bg-${bgColor} flex-wrap  border-b-2 ${isShow && "bg-color-black"}`}>
       <div className="flex p-2 justify-center items-center">
       <div className="flex justify-center items-center">
-      <img src={` ${isShow? "./chef-whiteLogo.svg":isColorWhite}`} alt="Logo" className="logo-image" />
+      <img src={` ${isShow? "../chef-whiteLogo.svg":isColorWhite}`} alt="Logo" className="logo-image" />
     </div>
   <span className={`text-bold  xl:text-4xl text-3xl  ${isShow&& " text-white "}`}>Sicily</span>
       </div>
@@ -86,7 +86,7 @@ useEffect(() => {
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2  navbar-menu-item">
-              <li>OUR MENU</li>
+              <li><Link href={"/ourMenu"}>OUR MENU</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
   
@@ -96,7 +96,7 @@ useEffect(() => {
             </div>
   
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">
-              <li>GALLERY</li>
+              <li><Link href={"/gallery"}>GALLERY</Link></li>
               <BsSuitDiamondFill className="text-transparent under-menu inline-block  transition ease-in-out delay-100" />
             </div>
             <div className="hover:text-[#cd9473] cursor-pointer transition ease-in-out delay-100  py-2 navbar-menu-item">

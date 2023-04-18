@@ -35,10 +35,12 @@ const OurBlogs = () => {
           />
                       </div>
                       <div className='w-full  divide-y divide-slate-400'>
-                          <div>
+              <Link href="/blog/[blogId]" as={`/blog/123`}>
+              <div>
                           <h2 className='font-bold  '>ipsum dolor sit amet consectetur adipisicing elit</h2>
                           <p className='my-4'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam magnam officia distinctio? Animi adipisci hic ullam sed ex amet eveniet optio, explicabo sunt sint non, laborum officia praesentium facere? Cumque! </p>
                 </div>
+              </Link>
                        
                           <div className='flex py-4'><h3 className='font-bold'>ART</h3>/ <p>SEP 17.2023</p></div>
                       </div>

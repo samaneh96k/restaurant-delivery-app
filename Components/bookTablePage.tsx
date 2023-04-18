@@ -62,15 +62,15 @@ const BookTablePage = () => {
   });
   return (
     <div className="h-full w-full flex flex-wrap mb-[10%]">
-      <div className="relative  w-full h-full ">
-        <div className="bg-black absolute top-[0] left-0 w-full h-full opacity-[0.6] z-20">
+                  <div className="relative  w-full h-full mt-[22%] sm:mt-[4%] md:mt-[8%] xl:mt-0">
+        <div className="bg-black absolute xl:top-[0]  left-0 w-full h-full opacity-[0.6] z-20">
         </div>
-        <div className=" absolute top-[50%] left-0 w-full h-fit z-20 text-center">
-          <h2 className="text-xl color-icon">BOOK A TABLE </h2>
-          <h2 className="text-4xl text-white">
+        <div className=" absolute top-[30%] sm:p-0 px-2 sm:top-[40%] xl:top-[50%] left-0 w-full h-fit  z-20 text-center">
+          <h2 className="xl:text-xl text-xs color-icon">BOOK A TABLE </h2>
+          <h2 className="xl:text-4xl md:text-2xl text-xs text-white">
             Let food be thy medicine and medicine be thy food.{" "}
           </h2>
-          <span className="text-xl text-white">~~~~</span>
+          <span className="xl:text-xl text-xs text-white">~~~~</span>
         </div>
         <div className="aspect-w-4 aspect-h-1 ">
           <img
@@ -97,7 +97,7 @@ const BookTablePage = () => {
                   {/* forms */}
                   <div className="flex flex-wrap justify-center">
                     {/* form1 */}
-                    <div className="xl:w-1/2 w-full p-8">
+                    <div className="xl:w-1/2 w-full md:p-8">
                       <div className="flex flex-col py-2 w-full">
                         <Field
                           type="text"
@@ -155,7 +155,7 @@ const BookTablePage = () => {
                     </div>
 
                     {/* form 2 */}
-                    <div className="xl:w-1/2 w-full p-8">
+                    <div className="xl:w-1/2 w-full md:p-8">
                       <div className="flex flex-col py-2 w-full">
                         <Field
                           type="text"
