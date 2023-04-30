@@ -9,7 +9,7 @@ const SinglePage = () => {
   const { blogId } = router.query
   return (
       <>
-         <Navbar bgColor="transparent" textColor="white" />
+         <Navbar bgColor="white" textColor="black "/>
        <SingleBlog />  
      
     

@@ -1,24 +1,28 @@
-import { messagingAction } from "@/storeRedux/contactUsAction";
-import { useAppDispatch } from "@/storeRedux/hook";
+
+
+import { registerUserAction } from "@/storeRedux/authActions";
+import { useAppDispatch, useAppSelector } from "@/storeRedux/hook";
+import { kanyeQuoteSelector } from "@/storeRedux/selectors";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { ErrorMessage, Field, Formik, Form } from "formik";
 import React from "react";
-import { toast } from "react-toastify";
+
 import * as Yup from "yup";
 interface MyFormValues {
   name: string;
-  email: string;
-  subject: string;
-  message: string;
+email: string;
+   password: string;
+   confirmPassword: string;
 
-}
-const ContactUsPage = () => {
+ }
+const Register = () => {
+   const { loading, userInfo, error, success } = useAppSelector(kanyeQuoteSelector)
   const dispatch = useAppDispatch();
-  const initialValues: MyFormValues = {
+  const initialValues:MyFormValues = {
     name: "",
     email: "",
-    subject: "",
-    message: "",
+    password: "",
+    confirmPassword:"",
 
   };
   const validationSchema = Yup.object({
@@ -27,56 +31,35 @@ const ContactUsPage = () => {
       .max(50, "Name is too long!")
       .required("Name is required!"),
     email: Yup.string().email().required("Email is required!"),
-    message: Yup.string().required("mesage is required!"),
-    subject: Yup.string().required("subject is required!"),
-   
+    password: Yup.string()
+    .min(6).required("password is required!")
+    
+    ,
+  confirmPassword: Yup.string().when('password', (password, field) =>
+    password ? field.required("confirmPassword is required!").oneOf([Yup.ref('password')]) : field
+  ),
   });
+
   return (
-    <div className="h-full w-full flex flex-wrap mb-[10%]">
-                    <div className="relative  w-full h-full mt-[22%] sm:mt-[4%] md:mt-[8%] xl:mt-0">
-        <div className="bg-black absolute xl:top-[0]  left-0 w-full h-full opacity-[0.6] z-20">
-        </div>
-        <div className=" absolute top-[30%] sm:p-0 px-2 sm:top-[40%] xl:top-[50%] left-0 w-full h-fit  z-20 text-center">
-          <h2 className="md:text-3xl text-[12px] text-white">Contact Us</h2>
-          <span className="md:text-xl text-white">~~~~</span>
-        </div>
-        <div className="aspect-w-4 aspect-h-1 ">
-          <img
-            className=" object-center object-cover   h-full w-full "
-            src="./header-img-small.jpg"
-            alt="restaurant-foods"
-          />
-        </div>
-      </div>
-      <div className="flex w-full justify-center p-8 flex-wrap">
-        <div className="xl:w-2/5 w-full flex justify-center p-8 flex-wrap items-center">
-          <div className="w-full text-bold xl:text-2xl ">
-          <h2 className="color-icon">CONTACT US</h2>
-          <p className="underline "> +98147598</p>
-          <p className="underline "> +samanehkarimi17@gmail.com</p>
-          <p className="underline "> 986 Ramsar,mazandaran,iran</p>
-          <span>~~~~</span>
-        </div>
-        </div>
-        <div className="xl:w-2/5 w-full px-8  ">
+      <div className='p-28'>
+   
+      
+
+      <div className="xl:w-2/5 mx-auto w-full px-8  ">
+      <div className="font-bold text-3xl text-center"> register</div>
           <div className=" w-full ">
           <Formik
             validateOnMount
             initialValues={initialValues}
             validationSchema={validationSchema}
-              onSubmit={(values, { setSubmitting }) => {
-                dispatch(messagingAction(values))
-         
-              toast.success("send your message!",{position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-                theme: "light",
-              });
+            onSubmit={ (values, { setSubmitting }) => {
+              if (values.password !== values.confirmPassword) {
+                alert('Password mismatch')
+              }
+             
+              console.log("Form submitted successfully", values);
               setSubmitting(false);
+             dispatch(registerUserAction(values))
             }}
           >
             {({ errors, touched, isValid, values }) =>
@@ -114,13 +97,13 @@ const ContactUsPage = () => {
                   <div className="flex flex-col py-2 w-full">
                     <Field
                       type="text"
-                      id="subject"
-                        name="subject"
-                        placeholder="subject"
+                      id="password"
+                        name="password"
+                        placeholder="password"
                       className="bg-gray-200 rounded-md p-1 text-[#333] px-4"
                     />
                     <ErrorMessage
-                      name="subject"
+                      name="password"
                       component="div"
                       className="text-red-500"
                     />
@@ -128,15 +111,15 @@ const ContactUsPage = () => {
                   <div className="flex flex-col py-2 w-full">
                     <Field
                         type="tel"
-                        component="textarea"
-                        id="message"
-                        placeholder="message"
-                      name="message"
+                      
+                        id="confirmPassword"
+                        placeholder="confirmPassword"
+                      name="confirmPassword"
                         className="bg-gray-200 rounded-md p-1   text-[#333] px-4"
                         
                     />
                     <ErrorMessage
-                      name="message"
+                      name="confirmPassword"
                       component="div"
                       className="text-red-500"
                     />
@@ -148,7 +131,7 @@ const ContactUsPage = () => {
               disabled={!isValid}
               className="flex items-center p-2 px-2 text-sm  xl:px-8 bg-transparent border-white-400 border-2 border-solid"
             > 
-            SEND MESSAGE
+           SIGNUP 
          
           <ArrowLongRightIcon className="md:h-6 md:w-4 h-4 w-4" />
             </button>
@@ -159,11 +142,10 @@ const ContactUsPage = () => {
               </Form>}
           </Formik>
         </div>
-        
         </div>
-      </div>
-    </div>
-  );
-};
+        </div>)
+        
 
-export default ContactUsPage;
+}
+
+export default Register

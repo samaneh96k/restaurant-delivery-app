@@ -37,10 +37,10 @@ const Footer = () => {
               <div className="md:w-1/4 w-full mb-4" >
                   <div className="text-[#ab795e]">MORE</div>
                  
-                 <div> <Link href="/blogs" className="cursor-pointer  ">Our Blogs</Link></div>
+                 <div> <Link href="/blogs" className="cursor-pointer">Our Blogs</Link></div>
                  <div> <a href="#" className="cursor-pointer  ">Contact Us</a></div>
                  <div> <a href="#" className="cursor-pointer  ">Delivery System</a></div>
-                 <div> <a href="#" className="cursor-pointer  ">Terms Of Use</a></div>
+                 <div> <Link href="/login" className="cursor-pointer">  Admin</Link></div>
                 
                 
               </div>

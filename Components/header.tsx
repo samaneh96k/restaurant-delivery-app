@@ -3,7 +3,7 @@ import MyCustomBtn from "./common/myCustomBtn";
 
 const Header = () => {
   return (
-    <div className="flex flex-wrap justify-center w-full xl:mb-[10%] md:mb-[15%] mb-[25%] pt-[10%] xl:h-fit">
+    <div className="flex flex-wrap justify-center w-full xl:mb-[10%] md:mb-[15%] mb-[25%] pt-[5%] xl:h-fit">
       <div className="xl:w-1/2 w-full  flex flex-wrap p-8 ">
         <div className="p-8 ">
           <div className="py-4">
@@ -24,7 +24,7 @@ const Header = () => {
             Quibusdam eveniet magnam velit blanditiis molestias ab perspiciatis
             similique porro aperiam quo.
           </p>
-          <MyCustomBtn color="white" text="BOOK A TABLE" bg="bg-slate-900" size="14px" link="/"/>
+          <MyCustomBtn color="white" text="BOOK A TABLE" bg="bg-slate-900" size="14px" link="/bookTable"/>
         </div>
       </div>
 

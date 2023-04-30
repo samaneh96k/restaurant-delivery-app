@@ -7,7 +7,7 @@ import React from 'react'
 const AboutUs = () => {
   return (
       <div >
-          <Navbar bgColor="white" textColor="black" />
+          <Navbar bgColor="white" textColor="black"/>
           <AboutUsPage/>
           <ServiceAptions/>
       <Footer/>
