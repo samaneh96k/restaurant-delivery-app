@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background-app-rgb: 244, 245, 247;
+    --background-footer-rgb: 51, 51, 51;
+    --color-primary-900:179,133,108;
+    --color-primary-800: 188,144,121;
+    --color-primary-700:196,156,135;
+    --color-primary-600:204,168,150;
+    --color-primary-500:211,180,164;
+    --color-primary-400: 219,192,179;
+    --color-primary-300:226,204,194;
+    --color-primary-200: 234,217,209;
+    --color-primary-100: 241,229,224;
+    --color-primary-50: 248,242,239;
+    --color-secondary-900: 42, 45, 83;
+    --color-secondary-800: 63, 66, 100;
+    --color-secondary-700: 85, 87, 117;
+    --color-secondary-600: 106, 108, 135;
+    --color-secondary-500: 127, 129, 152;
+    --color-secondary-400: 196, 158, 111;
+    --color-secondary-300:209, 168, 118;
+    --color-secondary-200: 222, 179, 125;
+    --color-secondary-100:235, 189, 132;
+    --color-secondary-50: 223, 223, 229;
+    --color-success: 0, 192, 115;
+    --color-warning: 255, 153, 0;
+    --color-error: 255, 71, 87;
+    --color-red-500: 239, 68, 68;
+    --color-red-300: 252, 165, 165;
+  }
+}
+
+@layer components {
+  .textField__input {
+    @apply w-full py-3 px-4 rounded-xl bg-gray-100 text-secondary-900 border border-gray-100 outline-none duration-200 transition-all ease-in-out hover:border-primary-300 focus:outline-none focus:border-primary-300 focus:shadow-input-focus focus:bg-white;
+  }
+  .flex-center{
+    @apply flex items-center justify-center
+  }
+}
+.animate{
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) ;
+}
+.delay{
+  animation: play 2.5s cubic-bezier(0.4, 0, 0.6, 1) ;
+}
+@keyframes pulse {
+  0% {
+    height: 0;
+  }
+  100% {
+    height:100 fit-content;
+  }
+}
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+ul {
+  list-style: none;
+}
+li {
+
+  cursor: pointer;
+}
+/* .navbar-menu-item{
+ text-align: center;
+} */
+/* .navbar-menu-item:hover .under-menu{
+  display: inline-block;
+  color: #cd9473;
+  
+} */
+/* .color-icon{
+  color: #cd9473 !important;
+} */
+/* .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .logo-image {
+  width: 60px;
+} */
+.bg-image{
+  background: url(../../public/img/chef-cooking.jpg);
+  background-position: center;
+  background-size: 100%;
+  
+
+
+
+}
+
+
+select{
+
+  border-width: 20px !important; 
+ border-top-width: 0 !important;
+ border-bottom-width: 0 !important;
+ border-left-width: 0 !important;
+
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--vazir-font);
+  min-height: 100vh;
+  user-select: none;
+  background-color: var(--background-app-rgb);
+}
