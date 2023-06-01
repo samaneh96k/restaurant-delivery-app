@@ -1,26 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { registerUserAction } from "./authActions";
 import { messagingAction } from "./contactUsAction";
-interface contactsValues {
+interface MyFormValues {
     name: string;
     email: string;
     subject: string;
     message: string;
   
-}
-export type contactState = {
-  contact: contactsValues[];
-  loading: boolean;
-  error: boolean;
-  success: boolean;
-};
-const initialState: contactState = {
-  contact: [], // for user object
+  }
+const initialState = {
     loading: false,
-    
-    error: false,
+    userInfo: {}, // for user object
+    userToken: null, // for storing the JWT
+    error: null,
     success: false, // for monitoring the registration process.
   }
-const contactUsSlice = createSlice({
+const authSlice = createSlice({
     name: "messaging",
     initialState,
     reducers: {
@@ -32,7 +27,7 @@ const contactUsSlice = createSlice({
         })
     
         builder.addCase(messagingAction.fulfilled, (state, { payload }) => {
-          state.contact = payload
+          state.userInfo = payload
         })
     
         builder.addCase(messagingAction.rejected, (state) => {
@@ -43,4 +38,4 @@ const contactUsSlice = createSlice({
     });
 
  
-export default contactUsSlice.reducer;
+export default authSlice.reducer;

@@ -25,7 +25,7 @@ export const registerUserAction = createAsyncThunk(
                 config
             )
         // store user's token in local storage
-      //localStorage.setItem('userToken', data.name)
+      localStorage.setItem('userToken', data.name)
       return data
     } catch (error:any) {
       // return custom error message from API if any

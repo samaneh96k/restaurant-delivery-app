@@ -1,29 +1,18 @@
 import {
   Action,
   configureStore,
-  
   ThunkAction,
 } from '@reduxjs/toolkit';
-import contactUsSlice from './contactUsSlice';
-import { setupListeners } from '@reduxjs/toolkit/dist/query';
-import { chefApi } from './services/chefApi';
-import { articleApi } from './services/aticleApi';
-import thunkMiddleware from 'redux-thunk';
+import authSlice from "./authSlice";
 
 export const store = configureStore({
-  reducer: {
-     message: contactUsSlice,  [chefApi.reducerPath]: chefApi.reducer,[articleApi.reducerPath]:articleApi.reducer
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({}).concat([chefApi.middleware, articleApi.middleware,thunkMiddleware]),
-    
+    reducer: {auth:authSlice},
 })
-setupListeners(store.dispatch);
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<
-   ReturnType,
-   RootState,
-   unknown,
-   Action<string>
- >;
+  ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>;

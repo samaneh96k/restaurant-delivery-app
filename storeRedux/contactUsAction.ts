@@ -1,7 +1,7 @@
 import axios from "axios"
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
-const backendURL = `${process.env.NEXT_PUBLIC_API_URL_FIRE_BASE}/message.json`
+const backendURL = 'https://mysicilyrestaurant-default-rtdb.firebaseio.com/message.json'
 interface MyFormValues {
   name: string;
   email: string;
@@ -9,7 +9,6 @@ interface MyFormValues {
   message: string;
 
 }
-
 export const messagingAction = createAsyncThunk(
     'messaging',
     async ({name, email, subject,message }:MyFormValues,{ rejectWithValue }) => {
