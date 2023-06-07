@@ -11,6 +11,12 @@ import Footer from './footer';
 
 
 
+export const metadata = {
+  title: "پروفایل کاربر",
+  description: "پروفایل کاربر",
+};
+
+
 
 
  const RootLayout =({
@@ -37,7 +43,7 @@ import Footer from './footer';
         {children}
        
         </Providers>
-        <Footer />
+      <Footer/>
       </body>
     </html>
   );

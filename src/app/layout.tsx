@@ -2,7 +2,10 @@
 import React from 'react'
 
 import "./globals.css"
-import { Providers } from './Providers';
+
+
+
+
 
 
 
@@ -32,12 +35,11 @@ import { Providers } from './Providers';
   
       <body>
      
-        <Providers>
+
         
         {children}
-       
-        </Providers>
-      
+  
+    
       </body>
     </html>
   );
